@@ -7,12 +7,12 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: symfony
-            MYSQL_USER: root
-            MYSQL_PASSWORD: root
+            MYSQL_USER: symfony
+            MYSQL_PASSWORD: symfony
     php:
         build: ./php-fpm
         expose:
-            - "9000"
+            - "9001"
         volumes:
             - ./symfony:/var/www/symfony
             - ./logs/symfony:/var/www/symfony/app/logs

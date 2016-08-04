@@ -6,6 +6,8 @@ RUN apk add --update \
     php5-fpm \
     php5-apcu \
     php5-curl \
+    php5-ctype \
+    php5-dom \
     php5-gd \
     php5-iconv \
     php5-imagick \
@@ -15,6 +17,7 @@ RUN apk add --update \
     php5-mysql \
     php5-opcache \
     php5-openssl \
+    php5-phar \
     php5-pdo \
     php5-pdo_mysql \
     php5-mysqli \
@@ -30,4 +33,4 @@ ADD symfony.pool.conf /etc/php5/fpm.d/
 
 CMD ["php-fpm", "-F"]
 
-EXPOSE 9000
+EXPOSE 9001
